@@ -1,3 +1,5 @@
+
+
 makeCacheMatrix<- function(x=matrix()) {
      if (ncol(x)==nrow(x) && det(x)!=0) {
              m<-NULL
@@ -12,8 +14,7 @@ makeCacheMatrix<- function(x=matrix()) {
              list(set=set, get=get, setInverse=setInverse, getInverse=getInverse)
             
                
-           } 
-           else {
+           } else {
                  return(message("The matrix isn't invertible"))
                  
                }
@@ -25,7 +26,6 @@ makeCacheMatrix<- function(x=matrix()) {
                message("Getting cached data")
                return(m)
                
-             }
              }
         
          mat<-x$get()
